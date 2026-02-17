@@ -49,7 +49,7 @@ document.getElementById("createForm").addEventListener("submit", async (e) => {
     });
 
     if (!response.ok) {
-      throw new Error("Помилка створення поста");
+      throw new Error("Помилка створення посту");
     } 
 
     const data = await response.json();
@@ -77,7 +77,7 @@ document.getElementById("updateForm").addEventListener("submit", async (e) => {
     });
 
     if (!response.ok) {
-      throw new Error("Помилка оновлення поста");
+      throw new Error("Помилка оновлення посту");
     } 
 
     const data = await response.json();
@@ -96,11 +96,12 @@ async function deletePost() {
     });
 
     if (!response.ok) {
-      throw new Error("Помилка видалення поста");
+      throw new Error("Помилка видалення посту");
     }
     
     showMessage(`Пост ${id} видалено`);
   } catch (error) {
     showError(error);
   }
+
 }
