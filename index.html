@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Lb33 Prykhodko</title>
+</head>
+<body>
+  <h2>Список користувачів</h2>
+  <button onclick="getUsers()">Завантажити користувачів</button>
+  <ul id="usersList"></ul>
+
+  <hr>
+
+  <h2>Створити пост</h2>
+  <form id="createForm">
+    <input type="text" id="title" placeholder="Заголовок" required>
+    <textarea id="body" placeholder="Текст поста" required></textarea>
+    <input type="number" id="userId" placeholder="ID користувача" required>
+    <button type="submit">Створити</button>
+  </form>
+
+  <hr>
+
+  <h2>Редагувати пост</h2>
+  <form id="updateForm">
+    <input type="number" id="updateId" placeholder="ID поста" required>
+    <input type="text" id="updateTitle" placeholder="Новий заголовок" required>
+    <textarea id="updateBody" placeholder="Новий текст" required></textarea>
+    <button type="submit">Оновити</button>
+  </form>
+
+  <hr>
+
+  <h2>Видалити пост</h2>
+  <input type="number" id="deleteId" placeholder="ID поста">
+  <button onclick="deletePost()">Видалити</button>
+
+  <p id="message"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
